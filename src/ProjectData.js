@@ -3,6 +3,7 @@ import certificateSystem from '../src/assets/certificateSystem.png'
 import doctorImage from '../src/assets/doctorImage.png'
 import countryImage from '../src/assets/countryImage.png'
 import InstaStayImage from '../src/assets/InstaStay.png'
+import chatterboxImage from '../src/assets/chatterboxImage.png'
 export default [
   {
     title: "CertifyNow - Certificate Generator System",
@@ -22,16 +23,16 @@ export default [
   liveDemo: "https://expense-trk.netlify.app",  
   sourceCode: "https://github.com/Khalil-deve/expense-tracker" 
 },
-
-  {
-    title: "Country Detail Viewer",
-    description:
-      "A responsive web application that utilizes the free REST Countries API to display detailed information about countries. Features include search, region-based filtering, dark mode, and an interactive UI.",
-    image:countryImage,
-    tags: ["React", "REST API", "CSS", "Responsive Design"],
-    liveDemo: "https://countriesapi-proj.netlify.app",
-    sourceCode: "https://github.com/Khalil-deve/React-countries-Api",
-  },
+{
+  title: "ChatterBox - Real-Time Chat App",
+  description:
+    "A real-time chat app with group and private messaging, image sharing via Cloudinary, and live updates using Socket.io. Built with JWT auth, MongoDB, and a responsive UI.",
+  image: chatterboxImage, 
+  tags: ["React", "Next.js", "Node.js", "Express", "MongoDB", "Socket.io", "JWT", "Tailwind CSS"],
+  liveDemo: "https://chatter-box-hnwz.vercel.app", 
+  sourceCode: "https://github.com/Khalil-deve/chatter-box"
+},
+ 
 {
   title: "Doctor Appointment System",
   description: "A full-stack web application that allows patients to book appointments with doctors, view schedules, and manage their profiles. Includes admin and doctor panels, authentication, and real-time updates.",
@@ -56,7 +57,16 @@ export default [
   tags: ["EJS", "Bootstrap", "Node.js", "MongoDB", "Express"],
   liveDemo: "https://instastay-project.vercel.app/listings",
   sourceCode: "https://github.com/Khalil-deve/InstaStay-project"
-}
+},
+ {
+    title: "Country Detail Viewer",
+    description:
+      "A responsive web application that utilizes the free REST Countries API to display detailed information about countries. Features include search, region-based filtering, dark mode, and an interactive UI.",
+    image:countryImage,
+    tags: ["React", "REST API", "CSS", "Responsive Design"],
+    liveDemo: "https://countriesapi-proj.netlify.app",
+    sourceCode: "https://github.com/Khalil-deve/React-countries-Api",
+  }
 
  
 ];
