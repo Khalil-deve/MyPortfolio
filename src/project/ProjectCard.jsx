@@ -1,19 +1,23 @@
 export default function ProjectCard({ projectData }) {
   return (
     <div className="project-card bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.02] h-full flex flex-col">
-      <div className="h-48 w-full overflow-hidden bg-gray-100 flex items-center justify-center">
-        <img
-          src={projectData.image}
-          alt={projectData.title}
-          className="w-auto h-auto object-cover"
-        />
-      </div>
+      <div className="aspect-[4/3] w-full overflow-hidden bg-gray-100">
+          <img
+            src={projectData.image}
+            alt={projectData.title}
+            className="w-full h-full object-cover"
+          />
+        </div>
 
       {/* Content area that grows to fill remaining space */}
       <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-semibold mb-2 text-gray-800">{projectData.title}</h3>
-        <p className="text-gray-600 mb-4 flex-grow">{projectData.description}</p>
-        
+        <h3 className="text-xl font-semibold mb-2 text-gray-800">
+          {projectData.title}
+        </h3>
+        <p className="text-gray-600 mb-4 flex-grow">
+          {projectData.description}
+        </p>
+
         <div className="flex flex-wrap gap-2 mb-4">
           {projectData.tags.map((tag, index) => (
             <span
@@ -24,8 +28,10 @@ export default function ProjectCard({ projectData }) {
             </span>
           ))}
         </div>
-        
-        <div className="flex space-x-4 mt-auto"> {/* mt-auto pushes links to bottom */}
+
+        <div className="flex space-x-4 mt-auto">
+          {" "}
+          {/* mt-auto pushes links to bottom */}
           <a
             href={projectData.liveDemo}
             target="_blank"
