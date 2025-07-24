@@ -21,7 +21,7 @@ export default function ContactInfo() {
             </div>
             <div>
               <h4 className="font-medium text-gray-800">Email</h4>
-              <p className="text-gray-600">muhammadkhalil.web@gmail.com</p>
+              <p className="text-gray-600 text-sm sm:text-base break-words">muhammadkhalil.web@gmail.com</p>
             </div>
           </div>
 
