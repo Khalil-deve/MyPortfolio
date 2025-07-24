@@ -73,10 +73,8 @@ export default [
     "A fully responsive Netflix-inspired movie streaming user interface built using only HTML and CSS. Features include a clean layout, hero section, movie thumbnails, and hover effects for a sleek viewing experience.",
   image: movieStreamingUIImage, 
   tags: ["HTML", "CSS", "Responsive Design"],
-  liveDemo: "https://your-live-demo-link.netlify.app",  // replace with actual live demo link
-  sourceCode: "https://github.com/Khalil-deve/netflix-clone"
+  liveDemo: "https://movie-streaming-ui.netlify.app",  
+  sourceCode: "https://github.com/Khalil-deve/movie-streaming-ui"
 }
 
-
- 
 ];
