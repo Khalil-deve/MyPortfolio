@@ -4,6 +4,7 @@ import doctorImage from '../src/assets/doctorImage.png'
 import countryImage from '../src/assets/countryImage.png'
 import InstaStayImage from '../src/assets/InstaStay.png'
 import chatterboxImage from '../src/assets/chatterboxImage.png'
+import movieStreamingUIImage from '../src/assets/movieStreamingUiImage.png'
 export default [
   {
     title: "CertifyNow - Certificate Generator System",
