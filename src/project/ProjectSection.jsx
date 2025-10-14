@@ -5,7 +5,7 @@ export default function ProjectSection() {
   const [showAll, setShowAll] = useState(false);
   
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="pb-20">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-4">My <span className="text-indigo-600">Projects</span></h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -17,7 +17,7 @@ export default function ProjectSection() {
         <div className="text-center mt-12">
           <button 
             onClick={() => setShowAll(!showAll)}
-            className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition duration-300"
+            className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-800 transition duration-300"
           >
             {showAll ? (
               <>

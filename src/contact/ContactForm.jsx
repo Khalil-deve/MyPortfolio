@@ -66,10 +66,10 @@ export default function ContactForm() {
     };
 
     return (
-        <form ref={formRef} className="space-y-6" onSubmit={handleSubmit}>
+        <form ref={formRef} className="space-y-6 bg-gray-600 p-8 rounded-lg" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label htmlFor="name" className="block text-gray-700 mb-2">Your Name</label>
+                    <label htmlFor="name" className="block text-gray-300 mb-2">Your Name</label>
                     <input
                         type="text"
                         id="name"
@@ -81,7 +81,7 @@ export default function ContactForm() {
                     {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
                 </div>
                 <div>
-                    <label htmlFor="email" className="block text-gray-700 mb-2">Your Email</label>
+                    <label htmlFor="email" className="block text-gray-300 mb-2">Your Email</label>
                     <input
                         type="email"
                         id="email"
@@ -95,7 +95,7 @@ export default function ContactForm() {
             </div>
 
             <div>
-                <label htmlFor="subject" className="block text-gray-700 mb-2">Subject</label>
+                <label htmlFor="subject" className="block text-gray-300 mb-2">Subject</label>
                 <input
                     type="text"
                     id="subject"
@@ -108,7 +108,7 @@ export default function ContactForm() {
             </div>
 
             <div>
-                <label htmlFor="message" className="block text-gray-700 mb-2">Your Message</label>
+                <label htmlFor="message" className="block text-gray-300 mb-2">Your Message</label>
                 <textarea
                     id="message"
                     rows="5"
@@ -122,7 +122,7 @@ export default function ContactForm() {
 
             <button
                 type="submit"
-                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition duration-300"
+                className="w-full bg-gradient-to-r from-sky-500 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition duration-300"
             >
                 Send Message <i className="fas fa-paper-plane ml-2"></i>
             </button>

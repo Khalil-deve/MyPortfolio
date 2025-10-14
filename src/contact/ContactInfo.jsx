@@ -1,8 +1,8 @@
 export default function ContactInfo() {
   return (
     <div className="lg:w-1/2">
-      <div className="bg-white p-8 rounded-lg shadow-lg h-full">
-        <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
+      <div className="bg-gradient-to-r from-indigo-100 to-indigo-200 p-8 rounded-lg shadow-lg h-full">
+        <h3 className="text-gray-800 text-xl font-semibold mb-6">Contact Information</h3>
 
         <div className="space-y-6">
           <div className="flex items-start">

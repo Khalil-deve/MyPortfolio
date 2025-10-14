@@ -8,7 +8,6 @@ import ProjectSection from './project/ProjectSection'
 import ContactSection from './contact/ContactSection'
 import FooterSection from './footer/FooterSection'
 import ScrollBack from './ScrollBack'
-import AboutMeSection from './AboutMeSection'
 
 function App() {
 
