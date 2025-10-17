@@ -128,11 +128,6 @@ body::before {
 }
 
 /* Navbar background styling */
-.navbar-bg {
-    backdrop-filter: blur(6px);
-    background: linear-gradient(180deg, rgba(10, 13, 27, 0.75), rgba(30, 20, 50, 0.65));
-    border-bottom: 1px solid rgba(255,255,255,0.04);
-}
 
 .navbar-bg .container a {
     color: #e6e9ff;
