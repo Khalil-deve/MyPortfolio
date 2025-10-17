@@ -71,7 +71,7 @@ export default function Navbar() {
 
     return (
         // Navigation Bar
-        <nav className="fixed w-full bg-white/8 backdrop-blur shadow-lg border-b border-gray-100 z-50">
+        <nav className="w-full bg-white/8 shadow-lg border-b border-gray-100 z-50">
             <div className="container mx-auto px-6 py-3">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
