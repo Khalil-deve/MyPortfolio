@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FaBars, FaTimes, FaUser, FaCode, FaProjectDiagram, FaEnvelope, FaHome, FaMoon, FaSun } from "react-icons/fa";
 import { RiComputerLine } from "react-icons/ri";
 import portfolioImg from './assets/portfolio.jpg'

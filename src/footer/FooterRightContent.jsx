@@ -1,3 +1,4 @@
+import React from 'react';
 export default function FooterRightContent() {
   return (
     <div className="flex flex-col items-center md:items-end">

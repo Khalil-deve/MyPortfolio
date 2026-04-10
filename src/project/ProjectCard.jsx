@@ -1,3 +1,4 @@
+import React from 'react';
 export default function ProjectCard({ projectData }) {
   // fallback palette when tagsColor is missing or shorter than tags
   const fallbackColors = [

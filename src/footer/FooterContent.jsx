@@ -1,3 +1,4 @@
+import React from 'react';
 import FooterLeftContent from "./FooterLeftContent";
 import FooterRightContent from "./FooterRightContent";
 

@@ -1,3 +1,4 @@
+import React from 'react';
 export default function ExtraTool() {
 	const tools = [
 		{ name: 'Git', icon: 'fab fa-git-alt', color: '#F05032' },

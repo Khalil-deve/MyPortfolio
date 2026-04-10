@@ -1,3 +1,4 @@
+import React from 'react';
 export default function ContactInfo() {
   return (
     <div className="lg:w-1/2">

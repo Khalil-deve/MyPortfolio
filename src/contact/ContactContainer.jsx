@@ -1,3 +1,4 @@
+import React from 'react';
 import ContactInfo from "./ContactInfo";
 import ContactUs from "./ContactUs";
 

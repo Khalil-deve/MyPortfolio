@@ -1,3 +1,4 @@
+import React from 'react';
 import TechnologyUsed from "./TechnologyUsed";
 
 export default function SkillSection() {

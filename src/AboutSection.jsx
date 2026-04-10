@@ -1,3 +1,4 @@
+import React from 'react';
 import portfolio from "./assets/portfolio.jpg";
 export default function AboutMeSection() {
   return (

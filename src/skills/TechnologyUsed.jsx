@@ -1,3 +1,4 @@
+import React from 'react';
 import ExtraTool from "./ExtraTool";
 import TechnicalSkill from "./TechnicalSkill";
 

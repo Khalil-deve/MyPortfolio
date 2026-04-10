@@ -1,3 +1,4 @@
+import React from 'react';
 import ContactContainer from "./ContactContainer";
 
 export default function ContactSection(){

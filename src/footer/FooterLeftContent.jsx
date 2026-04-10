@@ -1,3 +1,4 @@
+import React from 'react';
 export default function FooterLeftContent() {
     return (
         <div className="mb-8 md:mb-0">
