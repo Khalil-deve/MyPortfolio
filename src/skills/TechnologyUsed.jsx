@@ -67,7 +67,7 @@ export default function TechnologyUsed() {
                 </span>
                 Professional Skills
               </h4>
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {professionalSkills.map((s, i) => (
                   <div key={i} className="flex items-center gap-4 group p-3 rounded-2xl hover:bg-[var(--bg-main)] transition-colors duration-300">
                     <PieChart percentage={s.percentage} color={["var(--accent)", "#8b5cf6", "#06b6d4", "#f59e0b"][i % 4]} />

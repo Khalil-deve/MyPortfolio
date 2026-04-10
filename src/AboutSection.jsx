@@ -55,19 +55,19 @@ export default function AboutMeSection() {
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:gap-4">
               <a
                 href="https://drive.google.com/file/d/14FUoFA2_R4gPK-AC96er8xtp5wTaCj6g/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 bg-[var(--text-main)] text-[var(--bg-main)] rounded-xl font-bold hover:bg-[var(--accent)] hover:text-white hover:-translate-y-1 transition-all duration-300 flex items-center gap-2"
+                className="flex-1 sm:flex-none px-2 sm:px-8 py-3 sm:py-4 bg-[var(--text-main)] text-[var(--bg-main)] rounded-xl font-bold hover:bg-[var(--accent)] hover:text-white hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 text-[10px] sm:text-base whitespace-nowrap"
               >
-                <i className="fas fa-file-download"></i> Download CV
+                <i className="fas fa-file-download text-xs sm:text-base"></i> Download CV
               </a>
 
               <a
                 href="#contact"
-                className="px-8 py-4 bg-transparent border-2 border-[var(--accent)] text-[var(--accent)] rounded-xl font-bold hover:bg-[var(--accent)] hover:text-white hover:-translate-y-1 transition-all duration-300"
+                className="flex-1 sm:flex-none px-2 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-[var(--accent)] text-[var(--accent)] rounded-xl font-bold hover:bg-[var(--accent)] hover:text-white hover:-translate-y-1 transition-all duration-300 flex items-center justify-center text-[10px] sm:text-base text-center whitespace-nowrap"
               >
                 Hire Me Now
               </a>
