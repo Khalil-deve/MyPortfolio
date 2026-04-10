@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
-import { FaBars, FaTimes, FaUser, FaCode, FaProjectDiagram, FaEnvelope, FaHome } from "react-icons/fa";
+import { FaBars, FaTimes, FaUser, FaCode, FaProjectDiagram, FaEnvelope, FaHome, FaMoon, FaSun } from "react-icons/fa";
 import { RiComputerLine } from "react-icons/ri";
-import portfolioImg from './assets/portfolio.png'
+import portfolioImg from './assets/portfolio.jpg'
 
-export default function Navbar() {
+export default function Navbar({ theme, toggleTheme }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const mobileMenuRef = useRef(null);
     const menuButtonRef = useRef(null);
@@ -71,77 +71,112 @@ export default function Navbar() {
 
     return (
         // Navigation Bar
-        <nav className="w-full bg-white/8 shadow-lg border-b border-gray-100 z-50">
-            <div className="container mx-auto px-6 py-3">
+        <nav className="fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md bg-[var(--nav-bg)] border-b border-[var(--border-color)]">
+            <div className="container mx-auto px-6 py-4">
                 <div className="flex items-center justify-between">
-                    {/* Logo */}
-                    <div className="flex items-center space-x-3">
-                        <img 
-                            src={portfolioImg} 
-                            alt="portfolio" 
-                            className="h-12 w-12 rounded-full border-2 border-indigo-500 shadow-sm" 
-                        />
-                        <div className="hidden md:block">
-                            <div className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                                M.Khalil
-                            </div>
-                            <div className="text-xs text-gray-500 font-medium">Full Stack Developer</div>
+                    {/* Logo Section */}
+                    <div className="flex items-center space-x-4 group cursor-pointer">
+                        <div className="relative">
+                            <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-100 transition duration-500"></div>
+                            <img 
+                                src={portfolioImg} 
+                                alt="M.Khalil" 
+                                className="relative h-12 w-12 object-cover rounded-full border-2 border-[var(--border-color)] object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-300" 
+                            />
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-xl font-black tracking-tighter text-[var(--text-main)] leading-none uppercase">
+                                Khalil<span className="text-[var(--accent)]">.dev</span>
+                            </span>
+                            <span className="text-[10px] font-bold text-[var(--accent)] uppercase tracking-widest mt-1">Full Stack Engineer</span>
                         </div>
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex space-x-8">
+                    <div className="hidden md:flex items-center space-x-1">
                         {navItems.map((item) => {
+                            const Icon = item.icon;
                             return (
                                 <a 
                                     key={item.name}
                                     href={item.href} 
-                                    className="nav-link relative text-gray-400 hover:text-indigo-600 font-medium transition-colors duration-300 group flex items-center space-x-1"
+                                    className="px-4 py-2 text-sm font-bold text-[var(--text-muted)] hover:text-[var(--text-main)] rounded-lg hover:bg-[var(--accent)]/10 transition-all duration-300 flex items-center gap-2 group"
                                 >
-                                    <span>{item.name}</span>
-                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+                                    <Icon className="text-xs group-hover:text-[var(--accent)] transition-colors" />
+                                    {item.name}
                                 </a>
                             );
                         })}
+                        
+                        <div className="ml-4 pl-4 border-l border-[var(--border-color)] flex items-center space-x-4">
+                            <button 
+                                onClick={toggleTheme} 
+                                className="p-2.5 rounded-xl bg-[var(--bg-main)] border border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-all duration-300 shadow-sm"
+                                aria-label="Toggle Theme"
+                            >
+                                {theme === 'dark' ? <FaSun className="text-sm" /> : <FaMoon className="text-sm" />}
+                            </button>
+                            <a 
+                                href="#contact"
+                                className="px-5 py-2.5 bg-[var(--accent)] text-white text-sm font-bold rounded-xl shadow-lg shadow-indigo-500/20 hover:scale-105 transition-all duration-300"
+                            >
+                                Let's Talk
+                            </a>
+                        </div>
                     </div>
 
-                    {/* Mobile Menu Button */}
-                    <button 
-                        ref={menuButtonRef}
-                        className="md:hidden"
-                        onClick={toggleMenu}
-                        aria-label="Toggle menu"
-                        aria-expanded={isMenuOpen}
-                    >
-                        {isMenuOpen ? (
-                            <FaTimes className="text-2xl text-gray-400 transition-transform duration-300 transform rotate-90" />
-                        ) : (
-                            <FaBars className="text-2xl text-gray-400 transition-transform duration-300" />
-                        )}
-                    </button>
+                    {/* Mobile Menu Controls */}
+                    <div className="flex items-center space-x-3 md:hidden">
+                        <button 
+                            onClick={toggleTheme} 
+                            className="p-2 rounded-lg bg-[var(--bg-main)] border border-[var(--border-color)] text-[var(--text-muted)]"
+                            aria-label="Toggle Theme"
+                        >
+                            {theme === 'dark' ? <FaSun /> : <FaMoon />}
+                        </button>
+                        <button 
+                            ref={menuButtonRef}
+                            onClick={toggleMenu}
+                            className="p-2 rounded-lg bg-[var(--accent)] text-white"
+                            aria-label="Toggle menu"
+                        >
+                            {isMenuOpen ? <FaTimes /> : <FaBars />}
+                        </button>
+                    </div>
                 </div>
 
                 {/* Mobile Menu */}
                 <div 
                     ref={mobileMenuRef}
-                    className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
-                        isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
+                        isMenuOpen ? 'max-h-screen opacity-100 mt-6' : 'max-h-0 opacity-0'
                     }`}
                 >
-                    <div className="py-4 space-y-2 border-t border-gray-200">
+                    <div className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-4 shadow-2xl space-y-2">
                         {navItems.map((item) => {
-                            const IconComponent = item.icon;
+                            const Icon = item.icon;
                             return (
                                 <a 
                                     key={item.name}
                                     href={item.href} 
-                                    className="flex items-center space-x-3 py-3 px-4 text-gray-300 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg font-medium transition-all duration-300 transform hover:translate-x-2 group"
+                                    className="flex items-center gap-4 p-4 rounded-xl text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--accent)]/10 font-bold transition-all duration-300"
                                 >
-                                    <IconComponent className="text-lg text-indigo-600 group-hover:scale-110 transition-transform duration-300" />
+                                    <div className="w-10 h-10 rounded-lg bg-[var(--bg-main)] flex items-center justify-center border border-[var(--border-color)]">
+                                        <Icon className="text-lg" />
+                                    </div>
                                     <span>{item.name}</span>
+                                    <i className="fas fa-chevron-right ml-auto text-[10px] opacity-30"></i>
                                 </a>
                             );
                         })}
+                        <div className="pt-4 mt-4 border-t border-[var(--border-color)]">
+                            <a 
+                                href="#contact"
+                                className="w-full py-4 bg-[var(--accent)] text-white font-bold rounded-xl flex items-center justify-center shadow-lg"
+                            >
+                                Hire Me
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

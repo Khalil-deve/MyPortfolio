@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import Navbar from './Navbar'
 import HeroSection from './HeroSection'
@@ -10,11 +10,19 @@ import FooterSection from './footer/FooterSection'
 import ScrollBack from './ScrollBack'
 
 function App() {
+  const [theme, setTheme] = useState('dark');
 
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prevTheme => (prevTheme === 'dark' ? 'light' : 'dark'));
+  };
 
   return (
-    <>
-      <Navbar />
+    <div className={`app-wrapper ${theme}`}>
+      <Navbar theme={theme} toggleTheme={toggleTheme} />
       <HeroSection />
       <AboutSection />
       <SkillSection />
@@ -23,7 +31,7 @@ function App() {
       <FooterSection />
       {/* Back to Top Button */}
       <ScrollBack />
-    </>
+    </div>
   )
 }
 

@@ -15,32 +15,25 @@ export default function ProjectCard({ projectData }) {
   }
 
   return (
-    <div className="project-card bg-gray-500 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.02] h-full flex flex-col">
-      <div className="aspect-[4/3] w-full overflow-hidden bg-gray-100">
+    <div className="project-card bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 h-full flex flex-col group backdrop-blur-sm">
+      <div className="relative aspect-[16/10] w-full overflow-hidden">
         <img
           src={projectData.image}
           alt={projectData.title}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-card)] to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
       </div>
 
-      {/* Content area that grows to fill remaining space */}
       <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-semibold mb-2 text-gray-200">
-          {projectData.title}
-        </h3>
-        <p className="text-gray-300 mb-4 flex-grow">
-          {projectData.description}
-        </p>
-
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="mb-3 flex flex-wrap gap-2">
           {projectData.tags.map((tag, index) => {
             const color = (projectData.tagsColor && projectData.tagsColor[index]) || fallbackColors[index % fallbackColors.length];
             const textColor = readableTextColor(color);
             return (
               <span
                 key={index}
-                className="text-xs px-3 py-1 rounded-full font-medium"
+                className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-md font-bold shadow-sm"
                 style={{ backgroundColor: color, color: textColor }}
               >
                 {tag}
@@ -49,25 +42,36 @@ export default function ProjectCard({ projectData }) {
           })}
         </div>
 
+        <h3 className="text-xl font-bold mb-3 text-[var(--text-main)] group-hover:text-[var(--accent)] transition-colors duration-300">
+          {projectData.title}
+        </h3>
+        <p className="text-[var(--text-muted)] mb-6 flex-grow leading-relaxed line-clamp-3">
+          {projectData.description}
+        </p>
 
-        <div className="flex space-x-4 mt-auto">
-          {" "}
-          {/* mt-auto pushes links to bottom */}
+
+        <div className="flex items-center justify-between mt-auto pt-4 border-t border-[var(--border-color)]">
           <a
             href={projectData.liveDemo}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-indigo-600 hover:text-indigo-800 font-medium flex items-center gap-1 transition-colors"
+            className="flex items-center gap-2 text-sm font-bold text-[var(--accent)] hover:text-[var(--accent-light)] transition-all duration-300"
           >
-            <i className="fas fa-external-link-alt"></i> Live Demo
+            <span className="bg-[var(--accent)]/10 p-2 rounded-full">
+              <i className="fas fa-external-link-alt text-xs"></i>
+            </span>
+            Live Demo
           </a>
           <a
             href={projectData.sourceCode}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white font-medium flex items-center gap-1 transition-colors"
+            className="flex items-center gap-2 text-sm font-bold text-[var(--text-main)] hover:text-[var(--accent)] transition-all duration-300"
           >
-            <i className="fab fa-github"></i> Source Code
+            <span className="bg-[var(--text-muted)]/10 p-2 rounded-full">
+              <i className="fab fa-github text-sm"></i>
+            </span>
+            Github
           </a>
         </div>
       </div>

@@ -56,6 +56,15 @@ export default [
   sourceCode: "https://github.com/Khalil-deve/expense-tracker" 
 },
 {
+  title: "Online Room Booking System",
+  description: "A fully functional room booking web app where users can search available rooms, make bookings, and receive confirmation. Features include admin dashboard, room management, and real-time availability.",
+  image: InstaStayImage,
+  tags: ["EJS", "Bootstrap", "Node.js", "MongoDB", "Express"],
+  tagsColor: ["#F1502F", "#563D7C", "#68A063", "#4DB33D", "#2d2e2dff"],
+  liveDemo: "https://instastay-project.vercel.app/listings",
+  sourceCode: "https://github.com/Khalil-deve/InstaStay-project"
+},
+{
   title: "ChatterBox - Real-Time Chat App",
   description:
     "A real-time chat app with group and private messaging, image sharing via Cloudinary, and live updates using Socket.io. Built with JWT auth, MongoDB, and a responsive UI.",
@@ -103,15 +112,6 @@ export default [
   tagsColor: ["#61DBFB", "#38BDF8", "#F7DF1E", "#8B5CF6"],
   liveDemo: "https://nft-mar-place-clone.netlify.app",  
   sourceCode: "https://github.com/Khalil-deve/nft-marketplace-clone"
-},
-{
-  title: "Online Room Booking System",
-  description: "A fully functional room booking web app where users can search available rooms, make bookings, and receive confirmation. Features include admin dashboard, room management, and real-time availability.",
-  image: InstaStayImage,
-  tags: ["EJS", "Bootstrap", "Node.js", "MongoDB", "Express"],
-  tagsColor: ["#F1502F", "#563D7C", "#68A063", "#4DB33D", "#2d2e2dff"],
-  liveDemo: "https://instastay-project.vercel.app/listings",
-  sourceCode: "https://github.com/Khalil-deve/InstaStay-project"
 },
  {
     title: "Country Detail Viewer",
