@@ -84,26 +84,7 @@ export default [
   liveDemo: "https://doct-healhub.netlify.app/", 
   sourceCode: "https://github.com/Khalil-deve/doctor-appointment-system"
 },
-{
-    title: "Country Detail Viewer",
-    description:
-      "A responsive web application that utilizes the free REST Countries API to display detailed information about countries. Features include search, region-based filtering, dark mode, and an interactive UI.",
-    image:countryImage,
-    tags: ["React", "REST API", "CSS", "Responsive Design"],
-    tagsColor: ["#61DBFB", "#F1502F", "#264DE4", "#E34F26"],
-    liveDemo: "https://countriesapi-proj.netlify.app",
-    sourceCode: "https://github.com/Khalil-deve/React-countries-Api",
-  },
-  {
-  title: "Car Rental System — Landing Page",
-  description:
-    "A clean, responsive car rental landing page built with Vite, React and Tailwind CSS. This repository contains the frontend UI components (hero, booking form, car showcase, testimonials, etc.) used to demo a car rental product.",
-  image: movieStreamingUIImage, 
-  tags: ["React", "Tailwind CSS", "Responsive Design", "Farmer Motion"],
-  tagsColor: ["#61DBFB", "#38BDF8", "#E34F26", "#F43F5E"],
-  liveDemo: "https://carland-page.netlify.app",  
-  sourceCode: "https://github.com/Khalil-deve/Car-Rental-System-Landing-Frontend"
-},
+
 {
   title: "NFT Marketplace Frontend Clone",
   description: "A responsive frontend clone of an NFT marketplace, showcasing trending digital assets, wallet connect UI, and modern design with animations and filtering.",
@@ -112,6 +93,15 @@ export default [
   tagsColor: ["#61DBFB", "#38BDF8", "#F7DF1E", "#8B5CF6"],
   liveDemo: "https://nft-mar-place-clone.netlify.app",  
   sourceCode: "https://github.com/Khalil-deve/nft-marketplace-clone"
+},
+{
+  title: "Online Room Booking System",
+  description: "A fully functional room booking web app where users can search available rooms, make bookings, and receive confirmation. Features include admin dashboard, room management, and real-time availability.",
+  image: InstaStayImage,
+  tags: ["EJS", "Bootstrap", "Node.js", "MongoDB", "Express"],
+  tagsColor: ["#F1502F", "#563D7C", "#68A063", "#4DB33D", "#2d2e2dff"],
+  liveDemo: "https://instastay-project.vercel.app/listings",
+  sourceCode: "https://github.com/Khalil-deve/InstaStay-project"
 },
  {
     title: "Country Detail Viewer",
