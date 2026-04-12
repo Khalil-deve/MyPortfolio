@@ -94,15 +94,6 @@ export default [
   liveDemo: "https://nft-mar-place-clone.netlify.app",  
   sourceCode: "https://github.com/Khalil-deve/nft-marketplace-clone"
 },
-{
-  title: "Online Room Booking System",
-  description: "A fully functional room booking web app where users can search available rooms, make bookings, and receive confirmation. Features include admin dashboard, room management, and real-time availability.",
-  image: InstaStayImage,
-  tags: ["EJS", "Bootstrap", "Node.js", "MongoDB", "Express"],
-  tagsColor: ["#F1502F", "#563D7C", "#68A063", "#4DB33D", "#2d2e2dff"],
-  liveDemo: "https://instastay-project.vercel.app/listings",
-  sourceCode: "https://github.com/Khalil-deve/InstaStay-project"
-},
  {
     title: "Country Detail Viewer",
     description:
